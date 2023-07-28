@@ -175,7 +175,7 @@ body {
 body header {
   width: 100vw;
   height: 100vh;
-  background: url(../assets/gettyimages-815237840-2048x2048.jpg);
+  background: url(./assets/gettyimages-815237840-2048x2048.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
