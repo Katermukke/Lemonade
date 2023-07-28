@@ -1,0 +1,159 @@
+// ____________ Selling Point ____________
+
+.sellingPoint {
+  height: auto;
+  width: 100vw;
+  border-radius: 0 0 4rem 4rem;
+
+  .divTittleSellingPoint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    .tittleSellingPoint {
+      text-decoration: underline var(--color-dark-pink);
+      font-family: var(--font-Just-Another-Hand);
+      font-size: var(--font-size-tittle-section);
+      margin-bottom: 3rem;
+
+      @include sm {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .flexSellingPoint {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: var(--margin-5);
+
+    @include lg {
+      flex-direction: column;
+    }
+
+    .backgroundMap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2.1rem;
+      background-color: var(--color-pastel-yellow);
+      height: auto;
+      width: auto;
+      margin-left: 2rem;
+      padding: 2rem;
+
+      @include lg {
+        width: 80%;
+        margin: 0 0 2.5rem 0;
+        padding: 1.3rem;
+      }
+
+      @include sm {
+        padding: 0.5rem;
+      }
+
+      #map {
+        border-radius: 1.1rem;
+        height: 33rem;
+        width: 50rem;
+
+        @include xl {
+          height: 33rem;
+          width: 36rem;
+        }
+
+        @include lg {
+          height: 30rem;
+          width: 100%;
+        }
+
+        @include sm {
+          height: 25rem;
+        }
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .animated-svg {
+        animation: bounce 1s infinite; // Appliquez l'animation
+      }
+    }
+
+    .timeTable {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      height: 37rem;
+      width: auto;
+      border-radius: 2.1rem;
+      margin: 0 2rem 0 2rem;
+      padding: 0 3rem 0 3rem;
+      background-color: var(--color-pastel-yellow);
+
+      @include sm {
+        height: 30rem;
+        width: 40%;
+      }
+
+      .divTittleTimeTable {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0 2rem 0;
+
+        .tittleTimeTable {
+          font-size: 3rem;
+          font-family: var(--font-Just-Another-Hand);
+        }
+      }
+
+      .schedule {
+        height: 20rem;
+        width: auto;
+        padding: 0 1rem 0 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .jour:nth-child(odd) {
+          height: 2.5rem;
+          width: 90%;
+          padding: 0 var(--margin-2) 0 var(--margin-2);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 1rem;
+          background-color: var(--background-color-opacity60);
+          border: 0.15rem solid var(--color-dark-pink);
+          font-family: var(--font-Jockey-One);
+        }
+
+        .jour:nth-of-type(even) {
+          height: 2.5rem;
+          width: 90%;
+          padding: 0 var(--margin-2) 0 var(--margin-2);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: none;
+          font-family: var(--font-Jockey-One);
+        }
+      }
+    }
+  }
+}

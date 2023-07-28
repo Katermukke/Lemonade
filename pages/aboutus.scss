@@ -1,0 +1,288 @@
+@import "../base/reset";
+@import "../base/font";
+@import "../utils/breakpoint";
+@import "../utils/mixins";
+
+:root {
+  --font-size-nav: 1.2rem;
+  --font-size-h1-home: 6rem;
+  --font-size-tittle-section: 5rem;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-yellow: #ffe454;
+  --color-pastel-yellow: #ffeb84;
+  --color-dark-pink: #ff9ad7;
+  --color-pastel-pink: #ffb0e0;
+  --color-pastel-pink2: #fee8f5;
+  --background-color-opacity60: #ff9ad760;
+  --background-color-opacity35: #ff9ad720;
+  --font-Just-Another-Hand: "Just Another Hand";
+  --font-Jockey-One: "Jockey One";
+  --margin-1: 1rem;
+  --margin-2: 2rem;
+  --margin-3: 3rem;
+  --margin-4: 4rem;
+  --margin-5: 5rem;
+  --margin-6: 6rem;
+  --margin-7: 7rem;
+  --margin-10: 10rem;
+}
+
+body {
+  @import "../layout/navbar";
+  z-index: 4;
+  overflow-x: hidden;
+
+  .backgroundPage {
+    background-color: var(--color-pastel-yellow);
+    background-position: center;
+    background-size: cover;
+
+    main {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .aboutUs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .titleAboutUs {
+          font-size: var(--font-size-tittle-section);
+          font-family: var(--font-Just-Another-Hand);
+          margin: var(--margin-4) 0 var(--margin-5) 0;
+          border: var(--color-pastel-pink) solid 0.2rem;
+          border-radius: 1rem;
+          padding: 1rem 0 0 0;
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include sm {
+            margin: 2rem 0 3rem 0;
+            font-size: 3rem;
+            padding: 0.3rem 0 0 0;
+          }
+        }
+      }
+
+      .ourHistory {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60%;
+        text-align: left;
+
+        @include sm {
+          width: 80%;
+        }
+
+        @include md {
+          width: 80%;
+        }
+
+        .titleOurHistory {
+          font-size: 4rem;
+          font-family: var(--font-Just-Another-Hand);
+          margin-bottom: var(--margin-1);
+          width: 100%;
+          text-align: left;
+
+          @include sm {
+            font-size: 2rem;
+          }
+        }
+
+        .paragraphTop {
+          color: #000;
+          font-size: 1.2rem;
+          font-family: "Jockey One";
+          line-height: normal;
+          margin-bottom: var(--margin-3);
+          text-align: left;
+
+          @include sm {
+            font-size: 0.8rem;
+            margin-bottom: 2rem;
+          }
+        }
+
+        .imgOne {
+          width: 100%;
+          height: 30rem;
+          background-image: url(/assets/lemonade_5.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 4rem;
+          margin-bottom: var(--margin-5);
+
+          @include sm {
+            height: 20rem;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .historyOfOurCocktail {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+
+        @include md {
+          width: 100%;
+        }
+
+        .titlehistoryOfOurCocktail {
+          font-size: var(--font-size-tittle-section);
+          font-family: var(--font-Just-Another-Hand);
+          margin-bottom: var(--margin-3);
+
+          @include sm {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+          }
+        }
+
+        .divTextImg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+          margin-bottom: 2rem;
+
+          @include md {
+            flex-direction: column;
+            margin-bottom: var(--margin-2);
+          }
+
+          @include sm {
+          }
+
+          .paragraphOne {
+            color: #000;
+            font-size: 1.2rem;
+            font-family: "Jockey One";
+            line-height: normal;
+            margin-bottom: var(--margin-3);
+            text-align: left;
+            text-align: justify;
+
+            @include sm {
+              font-size: 0.8rem;
+              margin-bottom: 2rem;
+            }
+          }
+
+          .imgTwo {
+            background-image: url(/assets/lemonade_1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 4rem;
+            width: 100%;
+            height: 30rem;
+
+            @include md {
+              margin-left: 0;
+              width: 100%;
+              height: 25rem;
+            }
+
+            @include sm {
+              margin-left: 0;
+              width: 100%;
+              height: 20rem;
+            }
+          }
+
+          .paragraph {
+            color: #000;
+            font-size: 1.2rem;
+            font-family: "Jockey One";
+            line-height: normal;
+            margin-bottom: var(--margin-3);
+            text-align: left;
+            text-align: justify;
+            width: 100%;
+
+            @include sm {
+              width: 100%;
+            }
+
+            @include md {
+              width: 100%;
+            }
+          }
+        }
+
+        .divTextImgTwo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-bottom: 2rem;
+
+          @include sm {
+            flex-direction: column;
+            margin-bottom: var(--margin-3);
+          }
+
+          @include md {
+            flex-direction: column;
+            margin-bottom: var(--margin-3);
+          }
+
+          .imgThree {
+            background-image: url(/assets/lemonade_2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 4rem;
+            width: 100%;
+            height: 40rem;
+
+            @include md {
+              margin-left: 0;
+              height: 30rem;
+              margin-bottom: 2rem;
+              width: 100%;
+            }
+
+            @include sm {
+              margin-right: 0;
+              margin-bottom: 2rem;
+              height: 20rem;
+            }
+          }
+
+          .paragraphTwo {
+            color: #000;
+            font-size: 1.2rem;
+            font-family: "Jockey One";
+            line-height: normal;
+            margin-bottom: var(--margin-3);
+            text-align: left;
+            text-align: justify;
+            width: 100%;
+
+            @include sm {
+              font-size: 0.8rem;
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @import "../layout/footer.scss";
+}

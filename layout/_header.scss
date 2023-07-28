@@ -1,0 +1,60 @@
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/gettyimages-815237840-2048x2048.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  //font-family: 'Just Another Hand', cursive;
+
+  @import "navbar.scss";
+
+  .divH1 {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .sensation {
+      font-size: 10rem;
+      margin-top: 20rem;
+      font-family: var(--font-Just-Another-Hand);
+      color: var(--color-white);
+
+      @include sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        margin-top: 20rem;
+      }
+    }
+
+    .buttonBuyNow {
+      width: 14rem;
+      height: 4.2rem;
+      border-radius: 1rem;
+      background-color: var(--color-pastel-pink);
+      font-family: var(--font-Jockey-One);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      border: none;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      @include sm {
+        width: 11rem;
+        height: 3.5rem;
+      }
+    }
+
+    .buttonBuyNow:hover {
+      background-color: var(--background-color-opacity35);
+      border: 0.2rem solid var(--color-dark-pink);
+    }
+  }
+}

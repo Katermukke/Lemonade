@@ -1,0 +1,32 @@
+// ____________ Our Lemonade ____________
+
+.ourLemonade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+
+  .divTitleOurLemonade {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .titleOurLemonade {
+      font-size: 6rem;
+      font-family: var(--font-Just-Another-Hand);
+      color: var(--color-black);
+      /* haut | droit | bas | gauche */
+      margin: 5rem 0 4rem 0;
+      text-decoration: underline var(--color-dark-pink);
+
+      @include md {
+        margin: 4rem 0 3rem 0;
+        font-size: 4rem;
+      }
+    }
+  }
+
+  @import "carrousel.scss";
+}

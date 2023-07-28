@@ -1,0 +1,22 @@
+@import "base/reset";
+@import "base/font";
+@import "utils/breakpoint";
+@import "utils/mixins";
+@import "utils/variables";
+
+body {
+  @import "layout/header";
+  overflow-x: hidden;
+
+  main {
+    border-radius: 0 0 4rem 4rem;
+    background-color: #fff;
+
+    @import "components/ourlemonade";
+    @import "components/allcategorie";
+    @import "components/shopnewarrival";
+    @import "components/sellingpoint";
+  }
+
+  @import "layout/footer.scss";
+}

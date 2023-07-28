@@ -1,0 +1,110 @@
+footer {
+  background-color: var(--color-pastel-pink);
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+
+  .divTitleFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0 5rem 0;
+  }
+
+  .titleFooter {
+    text-align: center;
+    width: 85%;
+    font-family: var(--font-Just-Another-Hand);
+    font-size: 4rem;
+
+    @include sm {
+      font-size: 2.7rem;
+    }
+  }
+
+  .containerForm {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .form {
+      width: 90%;
+      height: auto;
+      margin: 0 2rem 0 2rem;
+
+      .largeContainer {
+        margin-bottom: var(--margin-3);
+
+        .largeTitle {
+          font-size: var(--font-size-nav);
+          margin-bottom: var(--margin-2);
+          font-family: var(--font-Jockey-One);
+
+          @include sm {
+            font-size: 1.1rem;
+          }
+        }
+
+        .largeInput {
+          width: 100%;
+          appearance: none;
+          background: transparent;
+          border: 0;
+          outline: none;
+          border-bottom: 0.15rem solid var(--color-dark-pink);
+        }
+      }
+    }
+
+    .namePhoneEmail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--margin-3);
+
+      .container {
+        width: 30%;
+        .title {
+          font-size: var(--font-size-nav);
+          margin-bottom: var(--margin-2);
+          font-family: var(--font-Jockey-One);
+
+          @include sm {
+            font-size: 1.1rem;
+          }
+        }
+
+        .input {
+          width: 100%;
+          appearance: none;
+          background: transparent;
+          border: 0;
+          outline: none;
+          border-bottom: 0.15rem solid var(--color-dark-pink);
+        }
+      }
+    }
+
+    .bottomBar {
+      height: auto;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      font-family: var(--font-Just-Another-Hand);
+      font-size: 1.5rem;
+
+      @include sm {
+        font-size: 0.8rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,453 @@
+@import "../base/reset";
+@import "../base/font";
+@import "../utils/breakpoint";
+@import "../utils/mixins";
+
+:root {
+  --font-size-nav: 1.2rem;
+  --font-size-h1-home: 6rem;
+  --font-size-tittle-section: 5rem;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-yellow: #ffe454;
+  --color-pastel-yellow: #ffeb84;
+  --color-dark-pink: #ff9ad7;
+  --color-pastel-pink: #ffb0e0;
+  --color-pastel-pink2: #fee8f5;
+  --background-color-opacity60: #ff9ad760;
+  --background-color-opacity35: #ff9ad720;
+  --font-Just-Another-Hand: "Just Another Hand";
+  --font-Jockey-One: "Jockey One";
+  --margin-1: 1rem;
+  --margin-2: 2rem;
+  --margin-3: 3rem;
+  --margin-4: 4rem;
+  --margin-5: 5rem;
+  --margin-6: 6rem;
+  --margin-7: 7rem;
+  --margin-10: 10rem;
+}
+
+body {
+  @import "../layout/navbar";
+  overflow-x: hidden;
+
+  main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: var(--margin-10);
+    border-radius: 0 0 4rem 4rem;
+
+    @include md {
+      padding-bottom: 5rem;
+    }
+
+    .Product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .titleProduct {
+        font-size: var(--font-size-tittle-section);
+        font-family: var(--font-Just-Another-Hand);
+        margin: var(--margin-4) 0 var(--margin-5) 0;
+        border: var(--color-pastel-pink) solid 0.2rem;
+        border-radius: 1rem;
+        padding: 1rem 0 0 0;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sm {
+          margin: 2rem 0 0 0;
+          font-size: 3rem;
+          padding: 0.3rem 0 0 0;
+        }
+      }
+    }
+
+    .rowCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: auto;
+      margin-top: var(--margin-3);
+
+      @include lg {
+        flex-direction: column;
+      }
+
+      .containerCardLeft {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include lg {
+          margin-bottom: 3%;
+          width: 80%;
+        }
+
+        @include sm {
+          width: 90%;
+        }
+
+        .firstCardLeft {
+          background-color: var(--color-white);
+          border-radius: 4.375rem 0 0 0;
+          height: 100%;
+          width: 50%;
+          padding: 2rem 2rem 0 2rem;
+          margin-left: 4rem;
+          background-color: var(--color-pastel-yellow);
+
+          @include lg {
+            margin: 0;
+          }
+
+          @include sm {
+            margin-bottom: 2rem;
+            padding: 1rem 1rem 0 1rem;
+            height: 17rem;
+            margin-right: 1rem;
+          }
+
+          .img {
+            background-image: url(/assets/lemonade_1.jpg);
+            background-size: cover;
+            background-position: center;
+            width: auto;
+            height: 30rem;
+            border-radius: 4.375rem 0rem 0rem 0rem;
+            border: 6px solid #ffcdeb;
+
+            @include xxl {
+              height: 25rem;
+            }
+
+            @include xl {
+              height: 15rem;
+            }
+
+            @include lg {
+              height: 25rem;
+            }
+
+            @include md {
+              height: 15rem;
+            }
+
+            @include sm {
+              height: 10rem;
+            }
+          }
+
+          .cardDescription {
+            margin: 1rem 0 1rem 0;
+
+            .title {
+              font-size: 1.4rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .severing {
+              font-size: 1.25rem;
+              font-family: var(--font-Just-Another-Hand);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .price {
+              font-size: 1.5625rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+
+        .firstCardRight {
+          background-color: var(--color-white);
+          border-radius: 0 4.375rem 0 0;
+          height: 100%;
+          width: 50%;
+          padding: 2rem 2rem 0 2rem;
+          margin: 0 1rem 0 2rem;
+          background-color: var(--color-pastel-yellow);
+
+          @include lg {
+            margin-right: 0;
+          }
+
+          @include sm {
+            margin-left: 0;
+            margin-bottom: 2rem;
+            padding: 1rem 1rem 0 1rem;
+            height: 17rem;
+          }
+
+          .img {
+            background-image: url(/assets/lemonade_2.jpg);
+            background-size: cover;
+            background-position: center;
+            width: auto;
+            height: 30rem;
+            border-radius: 0 4.375rem 0 0;
+            border: 6px solid #ffcdeb;
+
+            @include xxl {
+              height: 25rem;
+            }
+
+            @include xl {
+              height: 15rem;
+            }
+
+            @include lg {
+              height: 25rem;
+            }
+
+            @include md {
+              height: 15rem;
+            }
+
+            @include sm {
+              height: 10rem;
+            }
+          }
+          .cardDescription {
+            margin: 1rem 0 1rem 0;
+
+            .title {
+              font-size: 1.4rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .severing {
+              font-size: 1.25rem;
+              font-family: var(--font-Just-Another-Hand);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .price {
+              font-size: 1.5625rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .containerCardRight {
+        width: 50%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include lg {
+          width: 80%;
+        }
+
+        @include sm {
+          width: 90%;
+        }
+
+        .secondCardLeft {
+          background-color: var(--color-white);
+          border-radius: 4.375rem 0 0 0;
+          height: 100%;
+          width: 50%;
+          padding: 2rem 2rem 0 2rem;
+          margin: 0 2rem 0 1rem;
+          background-color: var(--color-pastel-yellow);
+          @include lg {
+            margin-left: 0;
+          }
+
+          @include sm {
+            width: 80%;
+            margin-right: 1rem;
+            padding: 1rem 1rem 0 1rem;
+            height: 17rem;
+          }
+
+          .img {
+            background-image: url(/assets/lemonade_3.jpg);
+            background-size: cover;
+            background-position: center;
+            width: auto;
+            height: 30rem;
+            border-radius: 4.375rem 0 0 0;
+            border: 6px solid #ffcdeb;
+
+            @include xxl {
+              height: 25rem;
+            }
+
+            @include xl {
+              height: 15rem;
+            }
+
+            @include lg {
+              height: 25rem;
+            }
+
+            @include md {
+              height: 15rem;
+            }
+
+            @include sm {
+              height: 10rem;
+            }
+          }
+          .cardDescription {
+            margin: 1rem 0 1rem 0;
+
+            .title {
+              font-size: 1.4rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .severing {
+              font-size: 1.25rem;
+              font-family: var(--font-Just-Another-Hand);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .price {
+              font-size: 1.5625rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+
+        .secondCardRight {
+          background-color: var(--color-white);
+          border-radius: 0 4.375rem 0 0;
+          height: 100%;
+          width: 50%;
+          padding: 2rem 2rem 0 2rem;
+          margin-right: 4rem;
+          background-color: var(--color-pastel-yellow);
+
+          @include lg {
+            margin: 0;
+          }
+
+          @include sm {
+            width: 80%;
+            padding: 1rem 1rem 0 1rem;
+            margin-right: 0;
+            height: 17rem;
+          }
+
+          .img {
+            background-image: url(/assets/lemonade_4.jpg);
+            background-size: cover;
+            background-position: center;
+            width: auto;
+            height: 30rem;
+            border-radius: 0 4.375rem 0 0;
+            border: 6px solid #ffcdeb;
+
+            @include xxl {
+              height: 25rem;
+            }
+
+            @include xl {
+              height: 15rem;
+            }
+
+            @include lg {
+              height: 25rem;
+            }
+
+            @include md {
+              height: 15rem;
+            }
+
+            @include sm {
+              height: 10rem;
+            }
+          }
+          .cardDescription {
+            margin: 1rem 0 1rem 0;
+
+            .title {
+              font-size: 1.4rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .severing {
+              font-size: 1.25rem;
+              font-family: var(--font-Just-Another-Hand);
+              margin-bottom: 0.5rem;
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+            .price {
+              font-size: 1.5625rem;
+              font-family: var(--font-Jockey-One);
+              color: var(--color-pastel-pink);
+
+              @include sm {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @import "../layout/footer.scss";
+}

@@ -1,0 +1,82 @@
+@import "../base/reset";
+@import "../base/font";
+@import "../utils/breakpoint";
+@import "../utils/mixins";
+
+:root {
+  --font-size-nav: 1.2rem;
+  --font-size-h1-home: 6rem;
+  --font-size-tittle-section: 5rem;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-yellow: #ffe454;
+  --color-pastel-yellow: #ffeb84;
+  --color-dark-pink: #ff9ad7;
+  --color-pastel-pink: #ffb0e0;
+  --color-pastel-pink2: #fee8f5;
+  --background-color-opacity60: #ff9ad760;
+  --background-color-opacity35: #ff9ad720;
+  --font-Just-Another-Hand: "Just Another Hand";
+  --font-Jockey-One: "Jockey One";
+  --margin-1: 1rem;
+  --margin-2: 2rem;
+  --margin-3: 3rem;
+  --margin-4: 4rem;
+  --margin-5: 5rem;
+  --margin-6: 6rem;
+  --margin-7: 7rem;
+  --margin-10: 10rem;
+}
+
+body {
+  @import "../layout/navbar";
+  background-color: var(--color-pastel-yellow);
+  overflow-x: hidden;
+
+  main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-pastel-yellow);
+    border-radius: 0 0 4rem 4rem;
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .titleContact {
+        font-size: var(--font-size-tittle-section);
+        font-family: var(--font-Just-Another-Hand);
+        margin: var(--margin-4) 0 var(--margin-6) 0;
+        border: var(--color-pastel-pink2) solid 0.15rem;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sm {
+          margin: var(--margin-3) 0 var(--margin-5) 0;
+        }
+      }
+    }
+
+    .coordonees {
+      font-family: var(--font-Just-Another-Hand);
+      font-size: var(--font-size-h1-home);
+      margin-bottom: 7rem;
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-pastel-pink);
+      }
+    }
+  }
+
+  @import "../layout/footer";
+}

@@ -1,0 +1,355 @@
+.divNavBar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jockey One", sans-serif;
+
+  @include lg {
+    z-index: 10;
+  }
+
+  .navBar {
+    width: 100%;
+    height: 6rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include lg {
+      background-color: #fff;
+      box-shadow: none;
+      width: 100%;
+      margin-top: 0;
+      border-radius: 0;
+      position: relative;
+      z-index: 20;
+      height: 5rem;
+    }
+
+    @include sm {
+      height: 4rem;
+    }
+
+    .divLogo {
+      width: 5.5rem;
+      height: 5.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 3rem;
+      background-color: #fff;
+      margin-left: 2rem;
+      padding: 0.8rem;
+      border: solid 0.3rem var(--color-pastel-pink);
+      border-radius: 50%;
+
+      @include lg {
+        background-image: url(/assets/logoLimencello.png);
+        background-repeat: no-repeat;
+        background-size: 10rem;
+        background-position: center;
+        border: none;
+        width: 15rem;
+        height: 2.3rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+
+        a {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @include sm {
+        width: 16rem;
+        height: 3.5rem;
+        padding: 0;
+        background-size: 7rem;
+      }
+
+      .logo {
+        width: 6rem;
+        height: 4rem;
+
+        @include lg {
+          display: none;
+        }
+      }
+    }
+
+    .navMiddle {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      @include lg {
+        position: absolute;
+        right: 0;
+        top: 5rem;
+        width: 90%;
+        height: 60vh;
+        margin-left: 25rem;
+        background-color: var(--color-pastel-yellow);
+        border-radius: 0 0 0 4rem;
+        border: solid 0.2rem var(--color-pastel-pink);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translate(100%);
+        transition: transform 0.6s cubic-bezier(0.17, 0.67, 0.37, 1.21);
+
+        &.mobile-menu {
+          transform: translateX(0%);
+        }
+      }
+
+      @include sm {
+        top: 4rem;
+      }
+
+      .navLink {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.8rem;
+        margin-right: 1.5rem;
+        background-color: rgb(255, 255, 255);
+        padding-left: 3rem;
+        padding-right: 1rem;
+
+        li {
+          margin-right: 1rem;
+        }
+
+        li:nth-child(1) {
+          margin-left: 1rem;
+
+          @include sm {
+            margin-left: 0;
+          }
+        }
+
+        li:nth-child(5) {
+          margin-right: 0;
+        }
+
+        li:not(.liButton) {
+          a {
+            position: relative;
+            color: #000000;
+          }
+        }
+
+        li:not(.liButton) {
+          a:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            height: 0.2rem;
+            width: 0;
+            background-color: var(--color-dark-pink);
+            border-radius: 50px;
+            transition: width 0.2s ease;
+          }
+        }
+
+        li:not(.liButton) {
+          a:hover:before {
+            margin-top: 4rem;
+            width: 100%;
+          }
+        }
+
+        @include xl {
+          width: 55%;
+        }
+
+        @include lg {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          height: 80%;
+          margin-right: 0;
+          background-color: var(--color-pastel-yellow);
+
+          li {
+            a {
+              font-size: 2rem;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        @include sm {
+          li {
+            a {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+
+      @include lg {
+        .liButton {
+          button {
+            width: 9rem;
+            height: 3.5rem;
+            a {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+
+      .buttonContact {
+        width: 7rem;
+        height: 3.2rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-pastel-pink);
+        font-family: var(--font-Jockey-One);
+        font-size: 1.1rem;
+        color: var(--color-white);
+        border: none;
+        transition: all 0.3s ease;
+
+        @include lg {
+          position: relative;
+          z-index: 4;
+          margin-right: 1rem;
+        }
+      }
+
+      .buttonContact:hover {
+        background-color: var(--background-color-opacity35);
+        border: 0.2rem solid var(--color-dark-pink);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .divButtonContactTwo {
+    display: none;
+  }
+
+  .divButtonContactTwo {
+    @include lg {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    @include md {
+      width: 100%;
+      height: 80%;
+    }
+
+    @include lg-min {
+      button.burger {
+        display: none;
+      }
+    }
+
+    @include lg {
+      button.burger {
+        width: 3rem;
+        height: 1.8rem;
+        border: none;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        margin: 2rem 2rem 2rem 2rem;
+
+        @include sm {
+          width: 2rem;
+          height: 1.5rem;
+        }
+
+        //  Menu Burger 1
+
+        &.burger3 {
+          &:after,
+          &:before,
+          span {
+            width: 100%;
+            height: 4px;
+            border-radius: 100px;
+            position: absolute;
+            left: 0px;
+            background: var(--color-dark-pink);
+            transform: rotate(0deg);
+            transition: all 0.4s;
+
+            @include md {
+              height: 3px;
+            }
+
+            @include sm {
+              height: 3px;
+            }
+          }
+
+          &:after,
+          &:before {
+            content: "";
+          }
+
+          &:after {
+            top: 0px;
+            margin-top: 0px;
+          }
+
+          &:before {
+            bottom: 0px;
+            margin-bottom: 0px;
+          }
+
+          span {
+            top: 50%;
+            margin-top: -2px;
+          }
+
+          &.on {
+            &:after {
+              transform: rotate(135deg) translate(9px, -9px);
+
+              @include md {
+                transform: rotate(135deg) translate(10.2px, -8.5px);
+              }
+              @include sm {
+                transform: rotate(135deg) translate(9px, -7.1px);
+              }
+            }
+
+            &:before {
+              transform: rotate(225deg);
+              bottom: 50%;
+              margin-bottom: -2px;
+            }
+
+            span {
+              transform: rotate(135deg);
+
+              @include md {
+                transform: rotate(135deg) translate(1px, 0px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
