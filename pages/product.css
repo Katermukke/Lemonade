@@ -139,11 +139,11 @@ table {
 
 @font-face {
   font-family: "Jockey One";
-  src: url("../font/jockeyone-regular-webfont.woff2") format("woff2"), url("../font/jockeyone-regular-webfont.woff") format("woff");
+  src: url("./font/jockeyone-regular-webfont.woff2") format("woff2"), url("./font/jockeyone-regular-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "Just Another Hand";
-  src: url("../font/justanotherhand-regular-webfont.woff2") format("woff2"), url("../font/justanotherhand-regular-webfont.woff") format("woff");
+  src: url("../font/justanotherhand-regular-webfont.woff2") format("woff2"), url("./font/justanotherhand-regular-webfont.woff") format("woff");
 }
 :root {
   --font-size-nav: 1.2rem;
