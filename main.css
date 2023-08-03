@@ -139,11 +139,11 @@ table {
 
 @font-face {
   font-family: "Jockey One";
-  src: url("../font/jockeyone-regular-webfont.woff2") format("woff2"), url("../font/jockeyone-regular-webfont.woff") format("woff");
+  src: url("./font/jockeyone-regular-webfont.woff2") format("woff2"), url("./font/jockeyone-regular-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "Just Another Hand";
-  src: url("../font/justanotherhand-regular-webfont.woff2") format("woff2"), url("../font/justanotherhand-regular-webfont.woff") format("woff");
+  src: url("../font/justanotherhand-regular-webfont.woff2") format("woff2"), url("./font/justanotherhand-regular-webfont.woff") format("woff");
 }
 :root {
   --font-size-nav: 1.2rem;
@@ -522,7 +522,7 @@ body header .divH1 {
   flex-direction: column;
 }
 body header .divH1 .sensation {
-  font-size: 10rem;
+  font-size: 4rem;
   margin-top: 20rem;
   font-family: var(--font-Just-Another-Hand);
   color: var(--color-white);
