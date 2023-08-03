@@ -143,7 +143,7 @@ table {
 }
 @font-face {
   font-family: "Just Another Hand";
-  src: url("../font/justanotherhand-regular-webfont.woff2") format("woff2"), url("./font/justanotherhand-regular-webfont.woff") format("woff");
+  src: url("./font/justanotherhand-regular-webfont.woff2") format("woff2"), url("./font/justanotherhand-regular-webfont.woff") format("woff");
 }
 :root {
   --font-size-nav: 1.2rem;
@@ -179,6 +179,7 @@ body header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow-x: hidden;
 }
 body header .divNavBar {
   width: 100%;
@@ -592,270 +593,76 @@ body main .ourLemonade .divTitleOurLemonade .titleOurLemonade {
   }
 }
 body main .ourLemonade .wrapper {
-  height: 40rem;
-  width: 80%;
+  display: flex;
+  max-width: 1200px;
+  position: relative;
   background-color: var(--color-pastel-yellow);
   border-radius: 2rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  padding: 0 5rem 0 5rem;
+  padding: 3rem;
+  margin: 3rem;
 }
-@media (max-width: 992px) {
-  body main .ourLemonade .wrapper {
-    height: 30rem;
-    padding: 0 3rem 0 3rem;
-  }
-}
-@media (max-width: 768px) {
-  body main .ourLemonade .wrapper {
-    height: 27rem;
-    width: 75%;
-  }
-}
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper {
-    height: 25rem;
-    width: 85%;
-    padding: 0 1rem 0 1rem;
-  }
-}
-body main .ourLemonade .wrapper .i {
-  left: 2rem;
-  transform: rotate(180deg);
-  transform-origin: 50% 50%;
-  font-family: var(--font-Just-Another-Hand);
-  color: var(--color-dark-pink);
-  position: relative;
+body main .ourLemonade .wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343f4f;
   cursor: pointer;
-  font-size: 5rem;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-body main .ourLemonade .wrapper .i:active {
+body main .ourLemonade .wrapper i:active {
   transform: translateY(-50%) scale(0.9);
 }
-body main .ourLemonade .wrapper .i:hover {
-  color: var(--color-dark-pink);
+body main .ourLemonade .wrapper i:hover {
+  background: #f2f2f2;
 }
-body main .ourLemonade .wrapper .i:first-child {
+body main .ourLemonade .wrapper i:first-child {
   left: -22px;
-  rotate: 180deg;
-  top: -30px;
+  display: none;
 }
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper .i:first-child {
-    display: none;
-  }
+body main .ourLemonade .wrapper i:last-child {
+  right: -22px;
 }
-body main .ourLemonade .wrapper .i:last-child {
-  top: 65px;
-  left: 25px;
-}
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper .i:last-child {
-    display: none;
-  }
-}
-@media (max-width: 992px) {
-  body main .ourLemonade .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-body main .ourLemonade .wrapper .carrousel {
+body main .ourLemonade .wrapper .carousel {
+  font-size: 0px;
   cursor: pointer;
-  white-space: nowrap;
-  display: flex;
-  justify-content: start;
-  align-items: center;
   overflow: hidden;
-  width: 100%;
+  white-space: nowrap;
   scroll-behavior: smooth;
 }
-body main .ourLemonade .wrapper .carrousel .card {
-  margin: 0 2rem 0 0;
-  width: 22.5%;
+body main .ourLemonade .wrapper .carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
 }
-@media (max-width: 1200px) {
-  body main .ourLemonade .wrapper .carrousel .card {
-    width: 30%;
+body main .ourLemonade .wrapper .carousel img {
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-left: 14px;
+  border-radius: 2rem;
+  width: 25%;
+}
+body main .ourLemonade .wrapper .carousel img:first-child {
+  margin-left: 0px;
+}
+@media screen and (max-width: 900px) {
+  body main .ourLemonade .wrapper .carousel img {
+    width: 50%;
   }
 }
-@media (max-width: 768px) {
-  body main .ourLemonade .wrapper .carrousel .card {
-    width: 47.5%;
-    margin: 0 1rem 0 0;
+@media screen and (max-width: 550px) {
+  body main .ourLemonade .wrapper .carousel img {
+    width: 100%;
   }
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 1rem;
-  background-position: center;
-  height: 30rem;
-}
-@media (max-width: 992px) {
-  body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) {
-    height: 20rem;
-    padding: 0 2rem 0 2rem;
-  }
-}
-@media (max-width: 768px) {
-  body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) {
-    height: 18rem;
-  }
-}
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) {
-    height: 14rem;
-  }
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) .buttonReadMore {
-  width: 12rem;
-  height: 3.8rem;
-  border-radius: 0.5rem;
-  background-color: var(--background-color-opacity60);
-  border: 0.2rem solid var(--color-dark-pink);
-  font-family: var(--font-Jockey-One);
-  font-size: 1.1rem;
-  margin: 0 4rem 2rem 4rem;
-  color: var(--color-white);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-@media (max-width: 992px) {
-  body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) .buttonReadMore {
-    width: 9rem;
-  }
-}
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) .buttonReadMore {
-    height: 2.5rem;
-    width: 7rem;
-    border: 0.15rem solid var(--color-dark-pink);
-  }
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(-n+12) .buttonReadMore:hover {
-  background-color: var(--color-dark-pink);
-  border: none;
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(3) {
-  background-image: url(assets/lemonade_2.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(4) {
-  background-image: url(assets/lemonade_3.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(5) {
-  background-image: url(assets/lemonade_4.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(6) {
-  background-image: url(assets/lemonade_2.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(7) {
-  background-image: url(assets/lemonade_1.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(8) {
-  background-image: url(assets/lemonade_2.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(9) {
-  background-image: url(assets/lemonade_3.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .item:nth-child(10) {
-  background-image: url(assets/lemonade_4.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-  font-size: 3rem;
-  font-family: var(--font-Just-Another-Hand);
-  color: var(--color-dark-pink);
-}
-@media (min-width: 2400px) {
-  body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-    display: none;
-  }
-}
-@media (max-width: 2400px) {
-  body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-    display: none;
-  }
-}
-@media (max-width: 992px) {
-  body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-    display: block;
-    margin-left: 1rem;
-  }
-}
-@media (max-width: 768px) {
-  body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-    margin: 0;
-  }
-}
-@media (max-width: 576px) {
-  body main .ourLemonade .wrapper .carrousel .card .guillemet:nth-child(4) {
-    display: none;
-  }
-}
-body main .ourLemonade .wrapper .carrousel .card .cardDescription {
-  margin: 1rem 0 1rem 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-body main .ourLemonade .wrapper .carrousel .card .cardDescription .title {
-  font-size: 1.5625rem;
-  font-family: var(--font-Jockey-One);
-  color: var(--color-pastel-pink);
-  margin-bottom: 0.5rem;
-}
-@media (max-width: 768px) {
-  body main .ourLemonade .wrapper .carrousel .card .cardDescription .title {
-    font-size: 1rem;
-  }
-}
-body main .ourLemonade .wrapper .carrousel .card .cardDescription .severing {
-  font-size: 1.25rem;
-  font-family: var(--font-Just-Another-Hand);
-  margin-bottom: 0.5rem;
-}
-body main .ourLemonade .wrapper .carrousel .card .cardDescription .price {
-  font-size: 1rem;
-  font-family: var(--font-Jockey-One);
-  color: var(--color-pastel-pink);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(1) .item {
-  background-image: url(assets/lemonade_4.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(2) .item {
-  background-image: url(assets/lemonade_1.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(3) .item {
-  background-image: url(assets/lemonade_2.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(4) .item {
-  background-image: url(assets/lemonade_3.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(5) .item {
-  background-image: url(assets/lemonade_4.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(6) .item {
-  background-image: url(assets/lemonade_1.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(7) .item {
-  background-image: url(assets/lemonade_2.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(8) .item {
-  background-image: url(assets/lemonade_3.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(9) .item {
-  background-image: url(assets/lemonade_4.jpg);
-}
-body main .ourLemonade .wrapper .carrousel .card:nth-child(10) .item {
-  background-image: url(assets/lemonade_1.jpg);
 }
 body main .allCategorie {
   display: flex;
@@ -916,7 +723,7 @@ body main .allCategorie .divAllCategorie .tittleAllCategorie {
 }
 body main .allCategorie .threeCategories {
   width: 85%;
-  height: 51rem;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -942,8 +749,8 @@ body main .allCategorie .threeCategories .lemonade {
 @media (max-width: 992px) {
   body main .allCategorie .threeCategories .lemonade {
     margin: 0 0 2rem 0;
-    height: 50%;
-    width: 80%;
+    height: 20rem;
+    width: 70vw;
   }
 }
 @media (max-width: 576px) {
@@ -963,7 +770,7 @@ body main .allCategorie .threeCategories .threeCategorieRight {
 @media (max-width: 992px) {
   body main .allCategorie .threeCategories .threeCategorieRight {
     width: 100%;
-    height: 65rem;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -986,8 +793,8 @@ body main .allCategorie .threeCategories .threeCategorieRight .tablecloth {
 @media (max-width: 992px) {
   body main .allCategorie .threeCategories .threeCategorieRight .tablecloth {
     margin: 0 0 2rem 0;
-    height: 50%;
-    width: 80%;
+    height: 20rem;
+    width: 70vw;
   }
 }
 @media (max-width: 576px) {
@@ -1016,8 +823,8 @@ body main .allCategorie .threeCategories .threeCategorieRight .mug {
 @media (max-width: 992px) {
   body main .allCategorie .threeCategories .threeCategorieRight .mug {
     margin: 0 0 2rem 0;
-    height: 50%;
-    width: 80%;
+    height: 20rem;
+    width: 70vw;
   }
 }
 @media (max-width: 576px) {
@@ -1120,6 +927,11 @@ body main .shopNewArrival .flexNewArrival .blocRight {
     height: 50%;
     align-items: center;
     padding: 0 1rem 0 1rem;
+  }
+}
+@media (max-width: 576px) {
+  body main .shopNewArrival .flexNewArrival .blocRight {
+    padding: 0;
   }
 }
 body main .shopNewArrival .flexNewArrival .blocRight h3 {

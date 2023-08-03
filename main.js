@@ -33,7 +33,7 @@ const showHideIcons = () => {
 
 const upDateScreen = () => {
   showHideIcons();
-  if (window.innerWidth > 576)
+  if (window.innerWidth > 40)
     (arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"),
       (arrowIcons[1].style.display =
         carousel.scrollLeft == scrollWidth ? "none" : "block");
@@ -106,8 +106,7 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
-window.addEventListener("rezise", upDateScreen);
-
+window.addEventListener("resize", upDateScreen);
 // <------------------------------------------- SELLING POINT ------------------------------------------->
 
 async function initMap() {
