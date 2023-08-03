@@ -227,7 +227,7 @@ body .divNavBar .navBar .divLogo {
 }
 @media (max-width: 992px) {
   body .divNavBar .navBar .divLogo {
-    background-image: url(/assets/logoLimencello.png);
+    background-image: url(../assets/logoLimencello.png);
     background-repeat: no-repeat;
     background-size: 10rem;
     background-position: center;
@@ -599,7 +599,7 @@ body main .rowCard .containerCardLeft .firstCardLeft {
   }
 }
 body main .rowCard .containerCardLeft .firstCardLeft .img {
-  background-image: url(/assets/lemonade_1.jpg);
+  background-image: url(../assets/lemonade_1.jpg);
   background-size: cover;
   background-position: center;
   width: auto;
@@ -689,7 +689,7 @@ body main .rowCard .containerCardLeft .firstCardRight {
   }
 }
 body main .rowCard .containerCardLeft .firstCardRight .img {
-  background-image: url(/assets/lemonade_2.jpg);
+  background-image: url(../assets/lemonade_2.jpg);
   background-size: cover;
   background-position: center;
   width: auto;
@@ -796,7 +796,7 @@ body main .rowCard .containerCardRight .secondCardLeft {
   }
 }
 body main .rowCard .containerCardRight .secondCardLeft .img {
-  background-image: url(/assets/lemonade_3.jpg);
+  background-image: url(../assets/lemonade_3.jpg);
   background-size: cover;
   background-position: center;
   width: auto;
@@ -886,7 +886,7 @@ body main .rowCard .containerCardRight .secondCardRight {
   }
 }
 body main .rowCard .containerCardRight .secondCardRight .img {
-  background-image: url(/assets/lemonade_4.jpg);
+  background-image: url(../assets/lemonade_4.jpg);
   background-size: cover;
   background-position: center;
   width: auto;

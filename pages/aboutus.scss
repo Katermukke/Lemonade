@@ -52,7 +52,7 @@ body {
         width: 100%;
 
         .titleAboutUs {
-          font-size: 2rem;
+          font-size: var(--font-size-tittle-section);
           font-family: var(--font-Just-Another-Hand);
           margin: var(--margin-4) 0 var(--margin-5) 0;
           border: var(--color-pastel-pink) solid 0.2rem;
@@ -183,7 +183,7 @@ body {
           }
 
           .imgTwo {
-            background-image: url(./assets/lemonade_1.jpg);
+            background-image: url(../assets/lemonade_1.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -242,7 +242,7 @@ body {
           }
 
           .imgThree {
-            background-image: url(./assets/lemonade_2.jpg);
+            background-image: url(../assets/lemonade_2.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;

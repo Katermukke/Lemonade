@@ -228,7 +228,7 @@ body .divNavBar .navBar .divLogo {
 }
 @media (max-width: 992px) {
   body .divNavBar .navBar .divLogo {
-    background-image: url(/assets/logoLimencello.png);
+    background-image: url(../assets/logoLimencello.png);
     background-repeat: no-repeat;
     background-size: 10rem;
     background-position: center;
@@ -526,7 +526,7 @@ body .backgroundPage main .aboutUs {
   width: 100%;
 }
 body .backgroundPage main .aboutUs .titleAboutUs {
-  font-size: 2rem;
+  font-size: var(--font-size-tittle-section);
   font-family: var(--font-Just-Another-Hand);
   margin: var(--margin-4) 0 var(--margin-5) 0;
   border: var(--color-pastel-pink) solid 0.2rem;
@@ -656,7 +656,7 @@ body .backgroundPage main .historyOfOurCocktail .divTextImg .paragraphOne {
   }
 }
 body .backgroundPage main .historyOfOurCocktail .divTextImg .imgTwo {
-  background-image: url(./assets/lemonade_1.jpg);
+  background-image: url(../assets/lemonade_1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -718,7 +718,7 @@ body .backgroundPage main .historyOfOurCocktail .divTextImgTwo {
   }
 }
 body .backgroundPage main .historyOfOurCocktail .divTextImgTwo .imgThree {
-  background-image: url(./assets/lemonade_2.jpg);
+  background-image: url(../assets/lemonade_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
