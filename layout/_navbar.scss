@@ -149,23 +149,25 @@
           }
         }
 
-        li:not(.liButton) {
-          a:before {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            height: 0.2rem;
-            width: 0;
-            background-color: var(--color-dark-pink);
-            border-radius: 50px;
-            transition: width 0.2s ease;
+        @media all and (min-width: 900px) {
+          li:not(.liButton) {
+            a:before {
+              content: "";
+              position: absolute;
+              bottom: -2px;
+              height: 0.2rem;
+              width: 0;
+              background-color: var(--color-dark-pink);
+              border-radius: 50px;
+              transition: width 0.2s ease;
+            }
           }
-        }
 
-        li:not(.liButton) {
-          a:hover:before {
-            margin-top: 4rem;
-            width: 100%;
+          li:not(.liButton) {
+            a:hover:before {
+              margin-top: 4rem;
+              width: 100%;
+            }
           }
         }
 

@@ -324,19 +324,21 @@ body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a {
   position: relative;
   color: #000000;
 }
-body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  height: 0.2rem;
-  width: 0;
-  background-color: var(--color-dark-pink);
-  border-radius: 50px;
-  transition: width 0.2s ease;
-}
-body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:hover:before {
-  margin-top: 4rem;
-  width: 100%;
+@media all and (min-width: 900px) {
+  body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-dark-pink);
+    border-radius: 50px;
+    transition: width 0.2s ease;
+  }
+  body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:hover:before {
+    margin-top: 4rem;
+    width: 100%;
+  }
 }
 @media (max-width: 1200px) {
   body .divNavBar .navBar .navMiddle .navLink {
