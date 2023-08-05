@@ -29,7 +29,7 @@
 }
 
 body {
-  @import "../layout/navbar";
+  @import "../layout/navbarPage";
   background-color: var(--color-pastel-yellow);
   overflow-x: hidden;
 
@@ -68,12 +68,25 @@ body {
       font-family: var(--font-Just-Another-Hand);
       font-size: var(--font-size-h1-home);
       margin-bottom: 7rem;
+      width: 80%;
 
       h2 {
         display: flex;
         justify-content: center;
         align-items: center;
         color: var(--color-pastel-pink);
+      }
+
+      @include lg {
+        h2 {
+          font-size: 6rem;
+        }
+      }
+
+      @include sm {
+        h2 {
+          font-size: 4rem;
+        }
       }
     }
   }

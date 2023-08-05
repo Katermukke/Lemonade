@@ -572,8 +572,6 @@ body main .ourLemonade {
   align-items: center;
   flex-direction: column;
   height: auto;
-  /* Import Google font - Poppins */
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 }
 body main .ourLemonade .divTitleOurLemonade {
   width: 100vw;
@@ -586,41 +584,32 @@ body main .ourLemonade .divTitleOurLemonade .titleOurLemonade {
   font-family: var(--font-Just-Another-Hand);
   color: var(--color-black);
   /* haut | droit | bas | gauche */
-  margin: 5rem 0 4rem 0;
+  margin: 5rem 0 2rem 0;
   -webkit-text-decoration: underline var(--color-dark-pink);
           text-decoration: underline var(--color-dark-pink);
 }
 @media (max-width: 768px) {
   body main .ourLemonade .divTitleOurLemonade .titleOurLemonade {
-    margin: 4rem 0 3rem 0;
+    margin: 4rem 0 2rem 0;
     font-size: 4rem;
   }
 }
 body main .ourLemonade * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body main .ourLemonade body {
-  display: flex;
-  padding: 0 35px;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(to left top, #031a9a, #8b53ff);
 }
 body main .ourLemonade .wrapper {
-  max-width: 1100px;
-  width: 100%;
+  font-family: var(--font-Jockey-One);
+  width: 80%;
   position: relative;
+  background-color: var(--color-pastel-yellow);
+  border-radius: 2rem;
+  margin: 2rem 3rem 2rem 3rem;
 }
-body main .ourLemonade .wrapper i {
+body main .ourLemonade .wrapper svg {
   top: 50%;
-  height: 50px;
-  width: 50px;
+  height: 2.2rem;
+  width: 2.2rem;
   cursor: pointer;
-  font-size: 1.25rem;
   position: absolute;
   text-align: center;
   line-height: 50px;
@@ -629,14 +618,20 @@ body main .ourLemonade .wrapper i {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+  padding: 0.7rem;
 }
-body main .ourLemonade .wrapper i:active {
+body main .ourLemonade .wrapper svg:active {
   transform: translateY(-50%) scale(0.85);
 }
-body main .ourLemonade .wrapper i:first-child {
+@media (max-width: 992px) {
+  body main .ourLemonade .wrapper svg {
+    display: none;
+  }
+}
+body main .ourLemonade .wrapper svg:first-child {
   left: -22px;
 }
-body main .ourLemonade .wrapper i:last-child {
+body main .ourLemonade .wrapper svg:last-child {
   right: -22px;
 }
 body main .ourLemonade .wrapper .carousel {
@@ -650,59 +645,80 @@ body main .ourLemonade .wrapper .carousel {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
-body main .ourLemonade .carousel::-webkit-scrollbar {
+body main .ourLemonade .wrapper .carousel::-webkit-scrollbar {
   display: none;
 }
-body main .ourLemonade .carousel.no-transition {
+body main .ourLemonade .wrapper .carousel.no-transition {
   scroll-behavior: auto;
 }
-body main .ourLemonade .carousel.dragging {
+body main .ourLemonade .wrapper .carousel.dragging {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
-body main .ourLemonade .carousel.dragging .card {
+body main .ourLemonade .wrapper .carousel.dragging .card {
   cursor: grab;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-body main .ourLemonade .carousel :where(.card, .img) {
+body main .ourLemonade .wrapper .carousel :where(.card, .img) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main .ourLemonade .carousel .card {
+body main .ourLemonade .wrapper .carousel .card {
   scroll-snap-align: start;
-  height: 342px;
   list-style: none;
-  background: #fff;
+  background-color: var(--color-pstel-yellow);
   cursor: pointer;
-  padding-bottom: 15px;
+  padding: 2rem 2rem 2rem 2rem;
   flex-direction: column;
   border-radius: 8px;
 }
-body main .ourLemonade .carousel .card .img {
-  background: #8b53ff;
-  height: 148px;
-  width: 148px;
-  border-radius: 50%;
+body main .ourLemonade .wrapper .carousel .card .img {
+  background-color: var(--color-pastel-pink);
+  height: 20.5rem;
+  width: 15.5rem;
+  border-radius: 2.2rem;
 }
-body main .ourLemonade .card .img img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+body main .ourLemonade .wrapper .carousel .card .img img {
+  height: 20rem;
+  width: 15rem;
+  border-radius: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
   border: 4px solid #fff;
 }
-body main .ourLemonade .carousel .card h2 {
+@media (max-width: 576px) {
+  body main .ourLemonade .wrapper .carousel .card .img {
+    height: 18.5rem;
+    width: 13.5rem;
+  }
+  body main .ourLemonade .wrapper .carousel .card .img img {
+    height: 18rem;
+    width: 13rem;
+  }
+}
+body main .ourLemonade .wrapper .carousel .card h2 {
   font-weight: 500;
   font-size: 1.56rem;
-  margin: 30px 0 5px;
+  margin: 1rem 0 0.5rem;
+  color: var(--color-pastel-pink);
 }
-body main .ourLemonade .carousel .card span {
-  color: #6a6d78;
+body main .ourLemonade .wrapper .carousel .card .severing {
   font-size: 1.31rem;
+  margin: 0 0 0.5rem;
+  font-family: var(--font-Just-Another-Hand);
+}
+body main .ourLemonade .wrapper .carousel .card .price {
+  font-size: 1.31rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-pastel-pink);
+}
+@media (max-width: 576px) {
+  body main .ourLemonade .wrapper .carousel .card {
+    padding: 1rem 2rem 1rem 2rem;
+  }
 }
 @media screen and (max-width: 900px) {
   body main .ourLemonade .wrapper .carousel {
@@ -814,9 +830,6 @@ body main .allCategorie .threeCategories .lemonade .tittleLemonade {
   color: var(--color-white);
   margin-bottom: var(--margin-1);
 }
-body main .allCategorie .threeCategories .threeCategorieRight {
-  height: 45rem;
-}
 @media (max-width: 992px) {
   body main .allCategorie .threeCategories .threeCategorieRight {
     width: 100%;
@@ -833,7 +846,7 @@ body main .allCategorie .threeCategories .threeCategorieRight .tablecloth {
   align-items: start;
   flex-direction: column;
   padding: 0 0 2.5rem 2.5rem;
-  height: 50%;
+  height: 49%;
   width: 30rem;
   margin-bottom: 1rem;
   background-image: url(assets/il_1140xN.2306075598_n43u.jpg);
@@ -864,7 +877,7 @@ body main .allCategorie .threeCategories .threeCategorieRight .mug {
   align-items: start;
   flex-direction: column;
   padding: 0 0 2.5rem 2.5rem;
-  height: 50%;
+  height: 49%;
   width: 30rem;
   background-image: url(assets/il_1140xN.4846704866_t2ft.jpg);
   background-size: cover;

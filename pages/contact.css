@@ -228,7 +228,7 @@ body .divNavBar .navBar .divLogo {
 }
 @media (max-width: 992px) {
   body .divNavBar .navBar .divLogo {
-    background-image: url(./assets/logoLimencello.png);
+    background-image: url(../assets/logoLimencello.png);
     background-repeat: no-repeat;
     background-size: 10rem;
     background-position: center;
@@ -543,12 +543,23 @@ body main .coordonees {
   font-family: var(--font-Just-Another-Hand);
   font-size: var(--font-size-h1-home);
   margin-bottom: 7rem;
+  width: 80%;
 }
 body main .coordonees h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-pastel-pink);
+}
+@media (max-width: 992px) {
+  body main .coordonees h2 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 576px) {
+  body main .coordonees h2 {
+    font-size: 4rem;
+  }
 }
 body footer {
   background-color: var(--color-pastel-pink);

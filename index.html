@@ -15,13 +15,7 @@
     <meta property="og:url" content="http://www.exemple.com" />
     <link rel="icon" type="image" href="exemple/chemin.jpeg" />
     <link rel="alternate" href="http://example.com" hreflang="fr" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css" />
     <script type="module" src="main.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -76,7 +70,15 @@
         <!--------- Carrousel --------->
 
         <div class="wrapper">
-          <img src="./assets/back.png" alt="img" />
+          <svg
+            id="left"
+            viewBox="0 0 256 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+            />
+          </svg>
           <ul class="carousel">
             <li class="card">
               <div class="img">
@@ -86,8 +88,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Blanche Pearson</h2>
-              <span>Sales Manager</span>
+              <h2 class="title">Granité Citron Vert</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">11.00€</p>
             </li>
 
             <li class="card">
@@ -98,8 +101,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Joenas Brauers</h2>
-              <span>Web Developer</span>
+              <h2 class="title">Granité fraise</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">12.00€</p>
             </li>
 
             <li class="card">
@@ -110,8 +114,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Lariach French</h2>
-              <span>Online Teacher</span>
+              <h2 class="title">Orangade menthe</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">11.00€</p>
             </li>
 
             <li class="card">
@@ -122,8 +127,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>James Khosravi</h2>
-              <span>Freelancer</span>
+              <h2 class="title">Granité fraise / Menthe</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">13.00€</p>
             </li>
 
             <li class="card">
@@ -134,8 +140,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Kristina Zasiadko</h2>
-              <span>Bank Manager</span>
+              <h2 class="title">Comcombre grenade</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">13.00€</p>
             </li>
 
             <li class="card">
@@ -146,8 +153,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Donald Horton</h2>
-              <span>App Designer</span>
+              <h2 class="title">Granité Citron Vert</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">12.00€</p>
             </li>
 
             <li class="card">
@@ -158,8 +166,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Donald Horton</h2>
-              <span>App Designer</span>
+              <h2 class="title">Granité fraise</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">11.00€</p>
             </li>
 
             <li class="card">
@@ -170,8 +179,9 @@
                   draggable="false"
                 />
               </div>
-              <h2>Donald Horton</h2>
-              <span>App Designer</span>
+              <h2 class="title">Orangade menthe</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">12.00€</p>
             </li>
 
             <li class="card">
@@ -182,11 +192,16 @@
                   draggable="false"
                 />
               </div>
-              <h2>Donald Horton</h2>
-              <span>App Designer</span>
+              <h2 class="title">Granité fraise / Menthe</h2>
+              <p class="severing">Cocktail weight 12 fl oz (350ml)</p>
+              <p class="price">13.00€</p>
             </li>
           </ul>
-          <i class="fa-solid fa-angle-right"></i>
+          <svg viewBox="0 0 256 512" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+            />
+          </svg>
         </div>
 
         <!--------- All Categorie --------->

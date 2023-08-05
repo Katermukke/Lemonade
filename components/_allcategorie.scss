@@ -100,8 +100,6 @@
     }
 
     .threeCategorieRight {
-      height: 45rem;
-
       @include lg {
         width: 100%;
         height: auto;
@@ -117,7 +115,7 @@
         align-items: start;
         flex-direction: column;
         padding: 0 0 2.5rem 2.5rem;
-        height: 50%;
+        height: 49%;
         width: 30rem;
         margin-bottom: 1rem;
         background-image: url(assets/il_1140xN.2306075598_n43u.jpg);
@@ -148,7 +146,7 @@
         align-items: start;
         flex-direction: column;
         padding: 0 0 2.5rem 2.5rem;
-        height: 50%;
+        height: 49%;
         width: 30rem;
         background-image: url(assets/il_1140xN.4846704866_t2ft.jpg);
         background-size: cover;

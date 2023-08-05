@@ -227,7 +227,7 @@ body .divNavBar .navBar .divLogo {
 }
 @media (max-width: 992px) {
   body .divNavBar .navBar .divLogo {
-    background-image: url(./assets/logoLimencello.png);
+    background-image: url(../assets/logoLimencello.png);
     background-repeat: no-repeat;
     background-size: 10rem;
     background-position: center;
