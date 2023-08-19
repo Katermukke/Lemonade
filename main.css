@@ -1113,6 +1113,7 @@ body main .sellingPoint .flexSellingPoint .backgroundMap {
 @media (max-width: 576px) {
   body main .sellingPoint .flexSellingPoint .backgroundMap {
     padding: 0.5rem;
+    border-radius: 1.6rem;
   }
 }
 body main .sellingPoint .flexSellingPoint .backgroundMap #map {

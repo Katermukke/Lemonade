@@ -170,10 +170,13 @@ table {
   --margin-10: 10rem;
 }
 
-body {
+html {
   overflow-x: hidden;
 }
-body .divNavBar {
+html body {
+  overflow-x: hidden;
+}
+html body .divNavBar {
   width: 100%;
   height: auto;
   display: flex;
@@ -182,11 +185,11 @@ body .divNavBar {
   font-family: "Jockey One", sans-serif;
 }
 @media (max-width: 992px) {
-  body .divNavBar {
+  html body .divNavBar {
     z-index: 10;
   }
 }
-body .divNavBar .navBar {
+html body .divNavBar .navBar {
   width: 100%;
   height: 6rem;
   border-radius: 1rem;
@@ -196,7 +199,7 @@ body .divNavBar .navBar {
   align-items: center;
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar {
+  html body .divNavBar .navBar {
     background-color: #fff;
     box-shadow: none;
     width: 100%;
@@ -208,11 +211,11 @@ body .divNavBar .navBar {
   }
 }
 @media (max-width: 576px) {
-  body .divNavBar .navBar {
+  html body .divNavBar .navBar {
     height: 4rem;
   }
 }
-body .divNavBar .navBar .divLogo {
+html body .divNavBar .navBar .divLogo {
   width: 5.5rem;
   height: 5.5rem;
   display: flex;
@@ -226,7 +229,7 @@ body .divNavBar .navBar .divLogo {
   border-radius: 50%;
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .divLogo {
+  html body .divNavBar .navBar .divLogo {
     background-image: url(../assets/logoLimencello.png);
     background-repeat: no-repeat;
     background-size: 10rem;
@@ -237,29 +240,29 @@ body .divNavBar .navBar .divLogo {
     margin-left: 1rem;
     margin-right: 2rem;
   }
-  body .divNavBar .navBar .divLogo a {
+  html body .divNavBar .navBar .divLogo a {
     width: 100%;
     height: 100%;
   }
 }
 @media (max-width: 576px) {
-  body .divNavBar .navBar .divLogo {
+  html body .divNavBar .navBar .divLogo {
     width: 16rem;
     height: 3.5rem;
     padding: 0;
     background-size: 7rem;
   }
 }
-body .divNavBar .navBar .divLogo .logo {
+html body .divNavBar .navBar .divLogo .logo {
   width: 6rem;
   height: 4rem;
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .divLogo .logo {
+  html body .divNavBar .navBar .divLogo .logo {
     display: none;
   }
 }
-body .divNavBar .navBar .navMiddle {
+html body .divNavBar .navBar .navMiddle {
   width: 80%;
   height: 100%;
   display: flex;
@@ -267,7 +270,7 @@ body .divNavBar .navBar .navMiddle {
   align-items: center;
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .navMiddle {
+  html body .divNavBar .navBar .navMiddle {
     position: absolute;
     right: 0;
     top: 5rem;
@@ -284,16 +287,16 @@ body .divNavBar .navBar .navMiddle {
     transform: translate(100%);
     transition: transform 0.6s cubic-bezier(0.17, 0.67, 0.37, 1.21);
   }
-  body .divNavBar .navBar .navMiddle.mobile-menu {
+  html body .divNavBar .navBar .navMiddle.mobile-menu {
     transform: translateX(0%);
   }
 }
 @media (max-width: 576px) {
-  body .divNavBar .navBar .navMiddle {
+  html body .divNavBar .navBar .navMiddle {
     top: 4rem;
   }
 }
-body .divNavBar .navBar .navMiddle .navLink {
+html body .divNavBar .navBar .navMiddle .navLink {
   width: 50%;
   height: 80%;
   display: flex;
@@ -305,26 +308,26 @@ body .divNavBar .navBar .navMiddle .navLink {
   padding-left: 3rem;
   padding-right: 1rem;
 }
-body .divNavBar .navBar .navMiddle .navLink li {
+html body .divNavBar .navBar .navMiddle .navLink li {
   margin-right: 1rem;
 }
-body .divNavBar .navBar .navMiddle .navLink li:nth-child(1) {
+html body .divNavBar .navBar .navMiddle .navLink li:nth-child(1) {
   margin-left: 1rem;
 }
 @media (max-width: 576px) {
-  body .divNavBar .navBar .navMiddle .navLink li:nth-child(1) {
+  html body .divNavBar .navBar .navMiddle .navLink li:nth-child(1) {
     margin-left: 0;
   }
 }
-body .divNavBar .navBar .navMiddle .navLink li:nth-child(5) {
+html body .divNavBar .navBar .navMiddle .navLink li:nth-child(5) {
   margin-right: 0;
 }
-body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a {
+html body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a {
   position: relative;
   color: #000000;
 }
 @media all and (min-width: 900px) {
-  body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:before {
+  html body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:before {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -334,18 +337,18 @@ body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a {
     border-radius: 50px;
     transition: width 0.2s ease;
   }
-  body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:hover:before {
+  html body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a:hover:before {
     margin-top: 4rem;
     width: 100%;
   }
 }
 @media (max-width: 1200px) {
-  body .divNavBar .navBar .navMiddle .navLink {
+  html body .divNavBar .navBar .navMiddle .navLink {
     width: 55%;
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .navMiddle .navLink {
+  html body .divNavBar .navBar .navMiddle .navLink {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -354,26 +357,26 @@ body .divNavBar .navBar .navMiddle .navLink li:not(.liButton) a {
     margin-right: 0;
     background-color: var(--color-pastel-yellow);
   }
-  body .divNavBar .navBar .navMiddle .navLink li a {
+  html body .divNavBar .navBar .navMiddle .navLink li a {
     font-size: 2rem;
     text-transform: uppercase;
   }
 }
 @media (max-width: 576px) {
-  body .divNavBar .navBar .navMiddle .navLink li a {
+  html body .divNavBar .navBar .navMiddle .navLink li a {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .navMiddle .liButton button {
+  html body .divNavBar .navBar .navMiddle .liButton button {
     width: 9rem;
     height: 3.5rem;
   }
-  body .divNavBar .navBar .navMiddle .liButton button a {
+  html body .divNavBar .navBar .navMiddle .liButton button a {
     font-size: 1.1rem;
   }
 }
-body .divNavBar .navBar .navMiddle .buttonContact {
+html body .divNavBar .navBar .navMiddle .buttonContact {
   width: 7rem;
   height: 3.2rem;
   padding: 0.5rem 1.2rem;
@@ -386,22 +389,22 @@ body .divNavBar .navBar .navMiddle .buttonContact {
   transition: all 0.3s ease;
 }
 @media (max-width: 992px) {
-  body .divNavBar .navBar .navMiddle .buttonContact {
+  html body .divNavBar .navBar .navMiddle .buttonContact {
     position: relative;
     z-index: 4;
     margin-right: 1rem;
   }
 }
-body .divNavBar .navBar .navMiddle .buttonContact:hover {
+html body .divNavBar .navBar .navMiddle .buttonContact:hover {
   background-color: var(--background-color-opacity35);
   border: 0.2rem solid var(--color-dark-pink);
   text-decoration: none;
 }
-body .divNavBar .divButtonContactTwo {
+html body .divNavBar .divButtonContactTwo {
   display: none;
 }
 @media (max-width: 992px) {
-  body .divNavBar .divButtonContactTwo {
+  html body .divNavBar .divButtonContactTwo {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -411,18 +414,18 @@ body .divNavBar .divButtonContactTwo {
   }
 }
 @media (max-width: 768px) {
-  body .divNavBar .divButtonContactTwo {
+  html body .divNavBar .divButtonContactTwo {
     width: 100%;
     height: 80%;
   }
 }
 @media (min-width: 992px) {
-  body .divNavBar .divButtonContactTwo button.burger {
+  html body .divNavBar .divButtonContactTwo button.burger {
     display: none;
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .divButtonContactTwo button.burger {
+  html body .divNavBar .divButtonContactTwo button.burger {
     width: 3rem;
     height: 1.8rem;
     border: none;
@@ -433,14 +436,14 @@ body .divNavBar .divButtonContactTwo {
   }
 }
 @media (max-width: 992px) and (max-width: 576px) {
-  body .divNavBar .divButtonContactTwo button.burger {
+  html body .divNavBar .divButtonContactTwo button.burger {
     width: 2rem;
     height: 1.5rem;
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3:after, body .divNavBar .divButtonContactTwo button.burger.burger3:before,
-  body .divNavBar .divButtonContactTwo button.burger.burger3 span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:after, html body .divNavBar .divButtonContactTwo button.burger.burger3:before,
+  html body .divNavBar .divButtonContactTwo button.burger.burger3 span {
     width: 100%;
     height: 4px;
     border-radius: 100px;
@@ -452,63 +455,63 @@ body .divNavBar .divButtonContactTwo {
   }
 }
 @media (max-width: 992px) and (max-width: 768px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3:after, body .divNavBar .divButtonContactTwo button.burger.burger3:before,
-  body .divNavBar .divButtonContactTwo button.burger.burger3 span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:after, html body .divNavBar .divButtonContactTwo button.burger.burger3:before,
+  html body .divNavBar .divButtonContactTwo button.burger.burger3 span {
     height: 3px;
   }
 }
 @media (max-width: 992px) and (max-width: 576px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3:after, body .divNavBar .divButtonContactTwo button.burger.burger3:before,
-  body .divNavBar .divButtonContactTwo button.burger.burger3 span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:after, html body .divNavBar .divButtonContactTwo button.burger.burger3:before,
+  html body .divNavBar .divButtonContactTwo button.burger.burger3 span {
     height: 3px;
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3:after, body .divNavBar .divButtonContactTwo button.burger.burger3:before {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:after, html body .divNavBar .divButtonContactTwo button.burger.burger3:before {
     content: "";
   }
-  body .divNavBar .divButtonContactTwo button.burger.burger3:after {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:after {
     top: 0px;
     margin-top: 0px;
   }
-  body .divNavBar .divButtonContactTwo button.burger.burger3:before {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3:before {
     bottom: 0px;
     margin-bottom: 0px;
   }
-  body .divNavBar .divButtonContactTwo button.burger.burger3 span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3 span {
     top: 50%;
     margin-top: -2px;
   }
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
     transform: rotate(135deg) translate(9px, -9px);
   }
 }
 @media (max-width: 992px) and (max-width: 768px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
     transform: rotate(135deg) translate(10.2px, -8.5px);
   }
 }
 @media (max-width: 992px) and (max-width: 576px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on:after {
     transform: rotate(135deg) translate(9px, -7.1px);
   }
 }
 @media (max-width: 992px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on:before {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on:before {
     transform: rotate(225deg);
     bottom: 50%;
     margin-bottom: -2px;
   }
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on span {
     transform: rotate(135deg);
   }
 }
 @media (max-width: 992px) and (max-width: 768px) {
-  body .divNavBar .divButtonContactTwo button.burger.burger3.on span {
+  html body .divNavBar .divButtonContactTwo button.burger.burger3.on span {
     transform: rotate(135deg) translate(1px, 0px);
   }
 }
-body main {
+html body main {
   height: auto;
   display: flex;
   justify-content: center;
@@ -516,18 +519,18 @@ body main {
   flex-direction: column;
   border-radius: 0 0 4rem 4rem;
 }
-body main .sellingPoint {
+html body main .sellingPoint {
   height: auto;
   width: 100vw;
   border-radius: 0 0 4rem 4rem;
 }
-body main .sellingPoint .divTittleSellingPoint {
+html body main .sellingPoint .divTittleSellingPoint {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
 }
-body main .sellingPoint .divTittleSellingPoint .tittleSellingPoint {
+html body main .sellingPoint .divTittleSellingPoint .tittleSellingPoint {
   -webkit-text-decoration: underline var(--color-dark-pink);
           text-decoration: underline var(--color-dark-pink);
   font-family: var(--font-Just-Another-Hand);
@@ -535,22 +538,22 @@ body main .sellingPoint .divTittleSellingPoint .tittleSellingPoint {
   margin-bottom: 3rem;
 }
 @media (max-width: 576px) {
-  body main .sellingPoint .divTittleSellingPoint .tittleSellingPoint {
+  html body main .sellingPoint .divTittleSellingPoint .tittleSellingPoint {
     font-size: 3rem;
   }
 }
-body main .sellingPoint .flexSellingPoint {
+html body main .sellingPoint .flexSellingPoint {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-bottom: var(--margin-5);
 }
 @media (max-width: 992px) {
-  body main .sellingPoint .flexSellingPoint {
+  html body main .sellingPoint .flexSellingPoint {
     flex-direction: column;
   }
 }
-body main .sellingPoint .flexSellingPoint .backgroundMap {
+html body main .sellingPoint .flexSellingPoint .backgroundMap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,36 +565,37 @@ body main .sellingPoint .flexSellingPoint .backgroundMap {
   padding: 2rem;
 }
 @media (max-width: 992px) {
-  body main .sellingPoint .flexSellingPoint .backgroundMap {
+  html body main .sellingPoint .flexSellingPoint .backgroundMap {
     width: 80%;
     margin: 0 0 2.5rem 0;
     padding: 1.3rem;
   }
 }
 @media (max-width: 576px) {
-  body main .sellingPoint .flexSellingPoint .backgroundMap {
+  html body main .sellingPoint .flexSellingPoint .backgroundMap {
     padding: 0.5rem;
+    border-radius: 1.6rem;
   }
 }
-body main .sellingPoint .flexSellingPoint .backgroundMap #map {
+html body main .sellingPoint .flexSellingPoint .backgroundMap #map {
   border-radius: 1.1rem;
   height: 33rem;
   width: 50rem;
 }
 @media (max-width: 1200px) {
-  body main .sellingPoint .flexSellingPoint .backgroundMap #map {
+  html body main .sellingPoint .flexSellingPoint .backgroundMap #map {
     height: 33rem;
     width: 36rem;
   }
 }
 @media (max-width: 992px) {
-  body main .sellingPoint .flexSellingPoint .backgroundMap #map {
+  html body main .sellingPoint .flexSellingPoint .backgroundMap #map {
     height: 30rem;
     width: 100%;
   }
 }
 @media (max-width: 576px) {
-  body main .sellingPoint .flexSellingPoint .backgroundMap #map {
+  html body main .sellingPoint .flexSellingPoint .backgroundMap #map {
     height: 25rem;
   }
 }
@@ -606,10 +610,10 @@ body main .sellingPoint .flexSellingPoint .backgroundMap #map {
     transform: translateY(0);
   }
 }
-body main .sellingPoint .flexSellingPoint .backgroundMap .animated-svg {
+html body main .sellingPoint .flexSellingPoint .backgroundMap .animated-svg {
   animation: bounce 1s infinite;
 }
-body main .sellingPoint .flexSellingPoint .timeTable {
+html body main .sellingPoint .flexSellingPoint .timeTable {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -622,23 +626,23 @@ body main .sellingPoint .flexSellingPoint .timeTable {
   background-color: var(--color-pastel-yellow);
 }
 @media (max-width: 576px) {
-  body main .sellingPoint .flexSellingPoint .timeTable {
+  html body main .sellingPoint .flexSellingPoint .timeTable {
     height: 30rem;
     width: 40%;
   }
 }
-body main .sellingPoint .flexSellingPoint .timeTable .divTittleTimeTable {
+html body main .sellingPoint .flexSellingPoint .timeTable .divTittleTimeTable {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0 2rem 0;
 }
-body main .sellingPoint .flexSellingPoint .timeTable .divTittleTimeTable .tittleTimeTable {
+html body main .sellingPoint .flexSellingPoint .timeTable .divTittleTimeTable .tittleTimeTable {
   font-size: 3rem;
   font-family: var(--font-Just-Another-Hand);
 }
-body main .sellingPoint .flexSellingPoint .timeTable .schedule {
+html body main .sellingPoint .flexSellingPoint .timeTable .schedule {
   height: 20rem;
   width: auto;
   padding: 0 1rem 0 1rem;
@@ -647,7 +651,7 @@ body main .sellingPoint .flexSellingPoint .timeTable .schedule {
   align-items: center;
   flex-direction: column;
 }
-body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-child(odd) {
+html body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-child(odd) {
   height: 2.5rem;
   width: 90%;
   padding: 0 var(--margin-2) 0 var(--margin-2);
@@ -659,7 +663,7 @@ body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-child(o
   border: 0.15rem solid var(--color-dark-pink);
   font-family: var(--font-Jockey-One);
 }
-body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-of-type(even) {
+html body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-of-type(even) {
   height: 2.5rem;
   width: 90%;
   padding: 0 var(--margin-2) 0 var(--margin-2);
@@ -669,7 +673,7 @@ body main .sellingPoint .flexSellingPoint .timeTable .schedule .jour:nth-of-type
   background-color: none;
   font-family: var(--font-Jockey-One);
 }
-body footer {
+html body footer {
   background-color: var(--color-pastel-pink);
   width: 100vw;
   height: auto;
@@ -678,24 +682,24 @@ body footer {
   align-items: center;
   flex-direction: column;
 }
-body footer .divTitleFooter {
+html body footer .divTitleFooter {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5rem 0 5rem 0;
 }
-body footer .titleFooter {
+html body footer .titleFooter {
   text-align: center;
   width: 85%;
   font-family: var(--font-Just-Another-Hand);
   font-size: 4rem;
 }
 @media (max-width: 576px) {
-  body footer .titleFooter {
+  html body footer .titleFooter {
     font-size: 2.7rem;
   }
 }
-body footer .containerForm {
+html body footer .containerForm {
   width: 100%;
   height: auto;
   display: flex;
@@ -703,25 +707,25 @@ body footer .containerForm {
   align-items: center;
   flex-direction: column;
 }
-body footer .containerForm .form {
+html body footer .containerForm .form {
   width: 90%;
   height: auto;
   margin: 0 2rem 0 2rem;
 }
-body footer .containerForm .form .largeContainer {
+html body footer .containerForm .form .largeContainer {
   margin-bottom: var(--margin-3);
 }
-body footer .containerForm .form .largeContainer .largeTitle {
+html body footer .containerForm .form .largeContainer .largeTitle {
   font-size: var(--font-size-nav);
   margin-bottom: var(--margin-2);
   font-family: var(--font-Jockey-One);
 }
 @media (max-width: 576px) {
-  body footer .containerForm .form .largeContainer .largeTitle {
+  html body footer .containerForm .form .largeContainer .largeTitle {
     font-size: 1.1rem;
   }
 }
-body footer .containerForm .form .largeContainer .largeInput {
+html body footer .containerForm .form .largeContainer .largeInput {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -731,26 +735,26 @@ body footer .containerForm .form .largeContainer .largeInput {
   outline: none;
   border-bottom: 0.15rem solid var(--color-dark-pink);
 }
-body footer .containerForm .namePhoneEmail {
+html body footer .containerForm .namePhoneEmail {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--margin-3);
 }
-body footer .containerForm .namePhoneEmail .container {
+html body footer .containerForm .namePhoneEmail .container {
   width: 30%;
 }
-body footer .containerForm .namePhoneEmail .container .title {
+html body footer .containerForm .namePhoneEmail .container .title {
   font-size: var(--font-size-nav);
   margin-bottom: var(--margin-2);
   font-family: var(--font-Jockey-One);
 }
 @media (max-width: 576px) {
-  body footer .containerForm .namePhoneEmail .container .title {
+  html body footer .containerForm .namePhoneEmail .container .title {
     font-size: 1.1rem;
   }
 }
-body footer .containerForm .namePhoneEmail .container .input {
+html body footer .containerForm .namePhoneEmail .container .input {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -760,7 +764,7 @@ body footer .containerForm .namePhoneEmail .container .input {
   outline: none;
   border-bottom: 0.15rem solid var(--color-dark-pink);
 }
-body footer .containerForm .bottomBar {
+html body footer .containerForm .bottomBar {
   height: auto;
   width: 90%;
   display: flex;
@@ -771,7 +775,7 @@ body footer .containerForm .bottomBar {
   font-size: 1.5rem;
 }
 @media (max-width: 576px) {
-  body footer .containerForm .bottomBar {
+  html body footer .containerForm .bottomBar {
     font-size: 0.8rem;
     margin-top: 2rem;
   }

@@ -28,20 +28,24 @@
   --margin-10: 10rem;
 }
 
-body {
-  @import "../layout/navbarPage";
+html {
   overflow-x: hidden;
 
-  main {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 0 0 4rem 4rem;
+  body {
+    @import "../layout/navbarPage";
+    overflow-x: hidden;
 
-    @import "../components/sellingpoint";
+    main {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 0 0 4rem 4rem;
+
+      @import "../components/sellingpoint";
+    }
+
+    @import "../layout/footer";
   }
-
-  @import "../layout/footer";
 }

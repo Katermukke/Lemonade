@@ -28,68 +28,72 @@
   --margin-10: 10rem;
 }
 
-body {
-  @import "../layout/navbarPage";
-  background-color: var(--color-pastel-yellow);
+html {
   overflow-x: hidden;
 
-  main {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  body {
+    @import "../layout/navbarPage";
     background-color: var(--color-pastel-yellow);
-    border-radius: 0 0 4rem 4rem;
+    overflow-x: hidden;
 
-    .contact {
+    main {
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      flex-direction: column;
+      background-color: var(--color-pastel-yellow);
+      border-radius: 0 0 4rem 4rem;
 
-      .titleContact {
-        font-size: var(--font-size-tittle-section);
-        font-family: var(--font-Just-Another-Hand);
-        margin: var(--margin-4) 0 var(--margin-6) 0;
-        border: var(--color-pastel-pink2) solid 0.15rem;
-        width: 60%;
+      .contact {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+
+        .titleContact {
+          font-size: var(--font-size-tittle-section);
+          font-family: var(--font-Just-Another-Hand);
+          margin: var(--margin-4) 0 var(--margin-6) 0;
+          border: var(--color-pastel-pink2) solid 0.15rem;
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include sm {
+            margin: var(--margin-3) 0 var(--margin-5) 0;
+          }
+        }
+      }
+
+      .coordonees {
+        font-family: var(--font-Just-Another-Hand);
+        font-size: var(--font-size-h1-home);
+        margin-bottom: 7rem;
+        width: 80%;
+
+        h2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--color-pastel-pink);
+        }
+
+        @include lg {
+          h2 {
+            font-size: 6rem;
+          }
+        }
 
         @include sm {
-          margin: var(--margin-3) 0 var(--margin-5) 0;
+          h2 {
+            font-size: 4rem;
+          }
         }
       }
     }
 
-    .coordonees {
-      font-family: var(--font-Just-Another-Hand);
-      font-size: var(--font-size-h1-home);
-      margin-bottom: 7rem;
-      width: 80%;
-
-      h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--color-pastel-pink);
-      }
-
-      @include lg {
-        h2 {
-          font-size: 6rem;
-        }
-      }
-
-      @include sm {
-        h2 {
-          font-size: 4rem;
-        }
-      }
-    }
+    @import "../layout/footer";
   }
-
-  @import "../layout/footer";
 }
